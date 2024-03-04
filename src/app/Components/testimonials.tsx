@@ -48,7 +48,7 @@ export default function Testimonial() {
     <div className="p-4">
               <animated.h1 style={props} className="text-4xl text-center mb-4">Testimonials</animated.h1>
       <div className={`grid gap-4 ${isMobile ? "grid-cols-2" : "sm:grid-cols-3 lg:grid-cols-4"}`}>
-        {list.slice(0, isMobile ? 3 : list.length).map((item, index) => (
+        {list.slice(0, isMobile ? 4 : list.length).map((item, index) => (
           <Card shadow="sm" key={index} isPressable >
             <CardBody className="p-4">
               <p className="text-center">{item.text}</p>
