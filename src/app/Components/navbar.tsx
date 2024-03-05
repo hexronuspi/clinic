@@ -1,20 +1,16 @@
-"use client"
+"use client";
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
-
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    
-    "Our Services",
-    "Privacy Policy",
-    "Book Apointment",
-    "AboutUs",
-    "FAQ",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Our Services", link: "Services" },
+    { name: "Privacy Policy", link: "privacy" },
+    { name: "AboutUs", link: "/" },
+    { name: "FAQ", link: "faq" },
+    { name: "Help & Feedback", link: "Help" },
   ];
 
   const variants = {
@@ -33,7 +29,6 @@ export default function NavBar() {
           <Link href="/">
           <p className="font-bold text-inherit">Kumar PolyClinic</p>
           </Link>
-         
         </NavbarBrand>
       </NavbarContent>
 
@@ -43,11 +38,6 @@ export default function NavBar() {
           Our Services
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="Appointment" aria-current="page">
-          Book Apointment
-          </Link>
-        </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="Help">
           Help & Feedback
@@ -55,27 +45,24 @@ export default function NavBar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} color="primary" href="/signup" variant="flat">
+          Book Apointment
           </Button>
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item.link}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
