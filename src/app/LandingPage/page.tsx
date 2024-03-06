@@ -2,7 +2,6 @@ import React from 'react'
 import NavBar from '../Components/navbar'
 import AboutUs from '../Components/aboutus'
 import Footer from '../Components/footer'
-import { SignForm } from '../Components/signup'
 import './index.css'
 import Gallery from '../Components/gallery'
 

@@ -1,65 +1,152 @@
 "use client"
-import React from "react";
-import { useViewport } from "react-viewport-hooks";
-import { Card, CardBody, CardFooter } from "@nextui-org/react";
-import { useSpring, animated } from "react-spring";
+import React, { useState } from "react";
+import { Card, CardBody } from "@nextui-org/react";
+import { motion } from "framer-motion";
+
+
 
 export default function Services() {
-  const { vw } = useViewport();
-  const isMobile = vw < 640;
-
-  const props = useSpring({ opacity: 1, from: { opacity: 0.8} });
-
-  const list = [
-    {
-      title: "Service Heading",
-      text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-    },
-    {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-      {
-        title: "Service Heading",
-        text: "Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit. Quisquam Consequatur Necessitatibus Eaque."
-      },
-  ];
+ 
+  const cardVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
 
   return (
-    <div className="p-4">
-              <animated.h1 style={props} className="text-4xl text-center mb-4">Our Services</animated.h1>
-      <div className={`grid gap-4 ${isMobile ? "grid-cols-2" : "sm:grid-cols-3 lg:grid-cols-4"}`}>
-        {list.slice(0, isMobile ? list.length : list.length).map((item, index) => (
-          <Card shadow="sm" key={index} isPressable >
-            <CardBody className="p-4">
-              <p className="text-center text-justify">{item.text}</p>
-            </CardBody>
-            <CardFooter className="text-small text-center">
-              <b>{item.title}</b>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+    <div className="p-4 grid grid-cols-2 gap-4">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="col-span-2 text-4xl text-center mb-4"
+      >
+        Our Services
+      </motion.h1>
+      <p className="col-span-2 text-center text-xl text-gray-400 leading-relaxed">
+        List of Services offered by our clinic.
+      </p>
+     
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Cervical Cancer</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Causes:</h3>
+            <p className="mb-4 text-gray-600 text-justify">
+              99% of cervical cancer cases are caused by the Human Papillomavirus (HPV), specifically strains such as Mumam Rapilloma virus.
+            </p>
+            <h3 className="text-xl mb-2 font-semibold">Prevention:</h3>
+            <p className="mb-4 text-gray-600 text-justify">
+              HPV vaccination is highly effective in preventing cervical cancer.
+            </p>
+            <h2 className="text-2xl mb-3 font-bold">Services Offered</h2>
+            <h3 className="text-xl mb-2 font-semibold">Screening for Cervical Cancer</h3>
+            <p className="text-lg mb-2 font-semibold">Methods:</p>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>Pap smear/ Pap test</li>
+              <li>HPV testing</li>
+              <li>Cervical Cancer Treatment</li>
+            </ul>
+            <p className="text-gray-600 text-justify">
+              Comprehensive treatment options for cervical cancer, tailored to individual needs.
+            </p>
+          </div>
+        </CardBody>
+      </Card>
+
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Obstetrics Service</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>Normal Delivery</li>
+              <li>Caesarean Delivery</li>
+              <li>High Risk Delivery</li>
+              <li>Termination of Pregnancy</li>
+              <li>Medical Termination of Pregnancy</li>
+              <li>Irregular Period</li>
+              <li>PV Bleeding</li>
+              <li>Vaginal Itching</li>
+              <li>PCODS</li>
+              <li>Ectopic Pregnancy</li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Gynaecology Service</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>Hysterectomy </li>
+              <li>Hysteroscopy</li>
+              <li>Oophorectomy</li>
+              <li>Hystectomy</li>
+              <li>Cystocele, Rectocele repair</li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Contraception Service</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>Tuballiqarion </li>
+              <li>Vasectomy</li>
+              <li>Inqueable contraception</li>
+              <li>Oral Pills contraception</li>
+              <li>Emergency Contraception</li>
+              <li>Cu-T insertion and excision</li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Counseling Service</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>Premarital and Postmarital Counseling </li>
+              <li>Prepuberty Counseling</li>
+              <li>Contraceptive Counseling</li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
+
+      <Card className="shadow-lg border rounded-md">
+        <CardBody className="p-4">
+          <h2 className="text-2xl font-bold mb-2 text-center">Vaccination Service</h2>
+          <div>
+            <hr />
+            <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
+            <ul className="list-disc list-inside mb-4 text-gray-600">
+              <li>HPV </li>
+              <li>Hepatitis-B</li>
+              <li>T.T</li>
+              <li>MMR</li>
+              <li>Influenza</li>
+              <li>DT</li>
+              <li>Typhoid</li>
+            </ul>
+          </div>
+        </CardBody>
+      </Card>
     </div>
   );
 }

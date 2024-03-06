@@ -85,6 +85,8 @@ export const ContactUs = () => {
     First Name
   </label>
   <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" type="text" name="first_name" />
+
+  <p className="text-gray-500 text-sm">Same as on government ID Card.</p>
 </motion.div> </div>
         <div className="mb-4">
         <motion.div 
@@ -97,6 +99,8 @@ export const ContactUs = () => {
             Last Name
           </label>
           <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="last_name" type="text" name="last_name" />
+   
+    <p className="text-gray-500 text-sm">Same as on government ID Card.</p>
     </motion.div>
         </div>
         <div className="mb-4">
@@ -122,7 +126,11 @@ export const ContactUs = () => {
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phone_number">
             Phone Number
           </label>
+         
+         
           <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone_number" type="tel" name="phone_number" />
+          <p className="text-gray-500 text-sm">Indian Mobile Number (10 Digits)</p>
+    
        </motion.div>
         </div>
         <div className="mb-6">
@@ -135,7 +143,6 @@ export const ContactUs = () => {
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="date">
                 Date
             </label>
-
             <Popover>
       <PopoverTrigger asChild>
         <Button
@@ -158,7 +165,7 @@ export const ContactUs = () => {
         />
       </PopoverContent>
     </Popover>
-
+    <p className="text-gray-500 text-sm">Preferred clinic visit date.</p>
                 <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="hidden" name="date" value={date ? format(date, "PPP") : ""} />
     </motion.div>
         </div>
@@ -172,7 +179,8 @@ export const ContactUs = () => {
             Your Message    
           </label>
           <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" />
-  
+          <p className="text-gray-500 text-sm">If this is a General Question, Please mention, "General" in the message.</p>
+    
        </motion.div> </div>
         <div className="flex items-center justify-between">
           <motion.button 
