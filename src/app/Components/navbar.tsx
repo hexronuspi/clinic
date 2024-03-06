@@ -10,7 +10,7 @@ export default function NavBar() {
     { name: "Privacy Policy", link: "privacy" },
     { name: "AboutUs", link: "/" },
     { name: "FAQ", link: "faq" },
-    { name: "Help & Feedback", link: "Help" },
+    { name: "Help & Contact", link: "Help" },
   ];
 
   const variants = {
@@ -40,7 +40,7 @@ export default function NavBar() {
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="Help">
-          Help & Feedback
+          Help & Contact
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -55,9 +55,7 @@ export default function NavBar() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
+              color="foreground" 
               className="w-full"
               href={item.link}
               size="lg"

@@ -51,7 +51,7 @@ export default function Testimonial() {
         {list.slice(0, isMobile ? 4 : list.length).map((item, index) => (
           <Card shadow="sm" key={index} isPressable >
             <CardBody className="p-4">
-              <p className="text-center">{item.text}</p>
+              <p className="text-center text-justify">{item.text}</p>
             </CardBody>
             <CardFooter className="text-small text-center">
               <b>{item.title}</b>

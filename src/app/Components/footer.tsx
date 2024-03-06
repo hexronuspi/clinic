@@ -14,6 +14,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li><Link href="privacy" className="hover:underline">Privacy Policy</Link></li>
             <li><Link href="faq" className="hover:underline">FAQ</Link></li>
+            <li><Link href="Services" className="hover:underline">Services</Link></li>
           </ul>
         </div>
         <div className="w-full md:w-1/4 mt-6 md:mt-0 text-center">

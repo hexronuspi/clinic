@@ -67,6 +67,7 @@ export default function AboutUs() {
         </Card>
       </div>
     </div>
+    
   </div>
   );
 }

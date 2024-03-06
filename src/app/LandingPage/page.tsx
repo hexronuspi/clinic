@@ -2,18 +2,18 @@ import React from 'react'
 import NavBar from '../Components/navbar'
 import AboutUs from '../Components/aboutus'
 import Footer from '../Components/footer'
-import Map from '../Components/mapApi'
 import { SignForm } from '../Components/signup'
 import './index.css'
 import Gallery from '../Components/gallery'
 
+import Testimonial from '../Components/testimonials'
 export default function LandingPage() {
   return (
     <main>
       <NavBar/>
         <AboutUs />
         <Gallery/>
-        <Map/>
+        <Testimonial/>
         <Footer/>
     </main>
   )

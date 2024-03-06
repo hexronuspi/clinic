@@ -3,6 +3,7 @@ import React from "react";
 import { useViewport } from "react-viewport-hooks";
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import { useSpring, animated } from "react-spring";
+
 export default function Services() {
   const { vw } = useViewport();
   const isMobile = vw < 640;
@@ -51,7 +52,7 @@ export default function Services() {
         {list.slice(0, isMobile ? list.length : list.length).map((item, index) => (
           <Card shadow="sm" key={index} isPressable >
             <CardBody className="p-4">
-              <p className="text-center">{item.text}</p>
+              <p className="text-center text-justify">{item.text}</p>
             </CardBody>
             <CardFooter className="text-small text-center">
               <b>{item.title}</b>
