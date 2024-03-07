@@ -43,7 +43,13 @@ export default function AboutUs() {
         </h2>
         <div className="text-lg text-gray-800 mx-8 mb-4 text-justify">
           <p>
-          Dr. Nanda R Kumar is a distinguished infertility specialist and gynecologist in Chembur, boasting over 15 years of experience. She serves as a gynecologist at Kumar's Polyclinic, a premier gynecological center in the area. Her MBBS from Seth G.S. Medical College & K.E.M. Hospital, coupled with her membership in the Federation of Obstetric and Gynecological Societies of India, underscores her expertise. With a proven track record of fulfilling numerous parenthood dreams, she is esteemed as a top gynecologist in Kurla. Renowned for her utilization of innovative techniques and advanced technology, she is revered as the leading ladies' specialist doctor in Sion.
+          Dr. Nanda R Kumar is a distinguished infertility specialist and gynecologist in Chembur,
+           having <span className="text-blue-400">over 15 years of experience</span>. She serves as a gynecologist at Kumar's Polyclinic,
+            a premier gynecological center in the area. Her <span className="text-blue-400">MBBS from Seth G.S. Medical College & K.E.M. Hospital</span>,
+             coupled with her membership in the Federation of Obstetric and Gynecological Societies of India,
+              underscores her expertise. With a proven track record of fulfilling numerous parenthood dreams,
+               she is esteemed as a top gynecologist in Kurla. Renowned for her utilization of innovative techniques 
+               and advanced technology, she is revered as the leading ladies' specialist doctor in Sion.
           </p>
         </div>
         

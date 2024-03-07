@@ -26,7 +26,7 @@ export function LoginForm() {
         Welcome to Kumar's PolyClinic
       </motion.h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Login to your account or 
+        Welcome to your account or 
          <Button className="mx-2" color="primary" size="sm" variant="solid">
         <Link href="/signup">
         SignUp

@@ -31,7 +31,7 @@ export default function Services() {
      
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Cervical Cancer</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Cervical Cancer</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Causes:</h3>
@@ -59,7 +59,7 @@ export default function Services() {
 
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Obstetrics Service</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Obstetrics Service</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
@@ -81,7 +81,7 @@ export default function Services() {
 
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Gynaecology Service</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Gynaecology Service</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
@@ -98,7 +98,7 @@ export default function Services() {
 
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Contraception Service</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Contraception Service</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
@@ -116,7 +116,7 @@ export default function Services() {
 
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Counseling Service</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Counseling Service</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
@@ -131,14 +131,14 @@ export default function Services() {
 
       <Card className="shadow-lg border rounded-md">
         <CardBody className="p-4">
-          <h2 className="text-2xl font-bold mb-2 text-center">Vaccination Service</h2>
+          <h2 className="text-2xl font-bold mb-2 text-center text-blue-600 bg-blue-100 p-2 rounded-lg shadow-lg">Vaccination Service</h2>
           <div>
             <hr />
             <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
             <ul className="list-disc list-inside mb-4 text-gray-600">
               <li>HPV </li>
               <li>Hepatitis-B</li>
-              <li>T.T</li>
+              <li>T.T.</li>
               <li>MMR</li>
               <li>Influenza</li>
               <li>DT</li>

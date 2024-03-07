@@ -23,7 +23,7 @@ export function SignForm() {
         animate={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.5 }} 
       >
-        Join Kumar's PolyClinic
+        Welcome to Kumar's PolyClinic
       </motion.h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
         SignUp to Book Appointment or 

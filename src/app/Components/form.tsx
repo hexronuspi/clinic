@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-
+import { useMediaQuery } from 'react-responsive';
 import { format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
@@ -18,6 +18,8 @@ import {
 export const ContactUs = () => {
   const form = useRef<HTMLFormElement>(null);
   const [date, setDate] = React.useState<Date>()
+  
+  const isDesktop = useMediaQuery({ minWidth: 782 });
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -54,6 +56,7 @@ export const ContactUs = () => {
           () => {
             console.log('SUCCESS!');
             (form.current)?.reset();
+            alert("Form successfully submitted! We will get back to you soon.");
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -64,45 +67,43 @@ export const ContactUs = () => {
   
   return (
     <main>
-         <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="w-full max-w-xs mx-auto mt-20"
-    >
-     
-      <p className="text-center mb-4">Fill up the form below to send us a message.</p>
-      <form ref={form} onSubmit={sendEmail} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <div className="mb-4">
+      <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className={`w-full ${isDesktop ? 'max-w-2xl' : 'max-w-lg'} mx-auto mt-20`}
+      >
+        <p className="text-center mb-4">Fill up the form below to send us a message.</p>
+        <form ref={form} onSubmit={sendEmail} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div className="mb-4">
       <motion.div 
   initial={{ x: -100, opacity: 0 }}
   animate={{ x: 0, opacity: 1 }}
   transition={{ duration: 0.5 }}
   className="mb-4"
 >
-  <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first_name">
-    First Name
-  </label>
-  <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" type="text" name="first_name" />
+<div className="flex justify-between space-x-4">
+  <div className="flex-1">
+    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="first_name">
+      First Name
+    </label>
+    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="first_name" type="text" name="first_name" />
+ 
+  </div>
 
-  <p className="text-gray-500 text-sm">Same as on government ID Card.</p>
+  <div className="flex-1">
+    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last_name">
+      Last Name
+    </label>
+    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="last_name" type="text" name="last_name" />
+ 
+  </div>
+  
+</div>
+<p className="text-gray-500 text-sm">Same as on government ID Card.</p>
 </motion.div> </div>
-        <div className="mb-4">
-        <motion.div 
-  initial={{ x: -100, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.5 }}
-  className="mb-4"
->
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="last_name">
-            Last Name
-          </label>
-          <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="last_name" type="text" name="last_name" />
-   
-    <p className="text-gray-500 text-sm">Same as on government ID Card.</p>
-    </motion.div>
-        </div>
+    
         <div className="mb-4">
         <motion.div 
   initial={{ x: -100, opacity: 0 }}
