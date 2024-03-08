@@ -100,9 +100,9 @@ export default function Services() {
               <hr />
               <h3 className="text-xl mb-2 font-semibold">Services Offered:</h3>
               <ul className="list-disc list-inside mb-4 text-gray-600">
-                <li>Tuballiqarion </li>
+                <li>Tubal ligation </li>
                 <li>Vasectomy</li>
-                <li>Inqueable contraception</li>
+                <li>Injectable contraceptives</li>
                 <li>Oral Pills contraception</li>
                 <li>Emergency Contraception</li>
                 <li>Cu-T insertion and excision</li>

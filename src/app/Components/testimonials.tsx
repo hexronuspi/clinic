@@ -70,12 +70,14 @@ export default function Testimonial() {
   return (
     <div className="p-4 mt-10">
     <animated.h1 style={props} className="text-4xl text-center mb-4">Testimonials</animated.h1>
+  
     <p className="m-4 text-justify text-lg leading-relaxed">At Kumar's Polyclinic, experience heartfelt testimonials from our patients. Dr. Nanda Kumar, a renowned gynecologist, is praised for her polite and attentive care, ensuring safety and support.</p> <div className={`grid gap-4 ${isMobile ? "grid-cols-2" : "sm:grid-cols-3 lg:grid-cols-4"}`}>
+  
       {list.slice(0, isMobile ? 4 : list.length).map((item, index) => (
         <Link href={item.link || ""} key={index} target="blank">
         
             <Card shadow="sm" isPressable>
-              <CardBody className="p-4" style={{ height: "380px" }}>
+              <CardBody className="p-4" style={{ height: "250px" }}>
                 <p className="text-justify">{item.text}</p>
               </CardBody>
               <CardFooter className="text-small text-center">

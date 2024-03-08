@@ -1,8 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import { Button } from "@nextui-org/react";
 import {Card, CardHeader, CardBody, Image, Divider} from "@nextui-org/react";
-import Link from "next/link";
 import { TypewriterEffectSmooth } from "../../components/ui/typewritter-effect";
 
 export default function AboutUs() {

@@ -6,8 +6,9 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { name: "Our Services", link: "Services" },
+   
     { name: "Privacy Policy", link: "privacy" },
+    { name: "Our Services", link: "Services" },
     { name: "AboutUs", link: "/" },
     { name: "FAQ", link: "faq" },
     { name: "Help & Contact", link: "Help" },

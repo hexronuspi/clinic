@@ -14,8 +14,11 @@ export default function Gallery() {
       >
         Gallery
       </motion.h1>
-      <PhotoAlbum photos={photos} layout="masonry" />
-    
+      <div className="flex justify-center">
+  <div className="w-3/4 text-justify">
+    <PhotoAlbum photos={photos} layout="masonry" />
+  </div>
+</div>
     </div>
   );
 }

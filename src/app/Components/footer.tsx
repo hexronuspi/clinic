@@ -26,11 +26,24 @@ export default function Footer() {
 </div>
       </div>
       <div className="mt-6 border-t-2 border-gray-300 flex justify-center py-6">
-        <FaFacebook size={24} className="mx-2 hover:text-blue-400 transition duration-200" />
-        <FaPhone size={24} className="mx-2 hover:text-orange-400 transition duration-200 transform rotate-90" />
-        <FaGoogle size={24} className="mx-2 hover:text-blue-400 transition duration-200" />
-        <FaMailBulk size={24} className="mx-2 hover:text-orange-400 transition duration-200" />
-        <FaWhatsapp size={24} className="mx-2 hover:text-green-400 transition duration-200" />
+      <Link href="https://www.facebook.com/kumarpolyclinic" target="_blank" rel="noopener noreferrer">
+  <FaFacebook size={24} className="mx-2 hover:text-blue-400 transition duration-200" />
+</Link>
+<Link href="tel:+919967954124">
+  <FaPhone size={24} className="mx-2 hover:text-orange-400 transition duration-200 transform rotate-90" />
+</Link>
+<Link href="https://maps.app.goo.gl/DfcB3raS2nec3pNt6" target="_blank" rel="noopener noreferrer">
+  <FaGoogle size={24} className="mx-2 hover:text-blue-400 transition duration-200" />
+</Link>
+<Link href="mailto:drrajnish5@gmail.com">
+  <FaMailBulk size={24} className="mx-2 hover:text-orange-400 transition duration-200" />
+</Link>
+<Link href="https://wa.me/9967954124?text=Hi,%20I%20am%20reaching%20out%20with%20regard%20to%20Kumar's%20PolyClinic." target="_blank" rel="noopener noreferrer" title="Hi, I am reaching out with regard to Kumar's PolyClinic">
+  <FaWhatsapp size={24} className="mx-2 hover:text-green-400 transition duration-200" />
+</Link>
+ </div>
+      <div className="text-center text-sm mt-4">
+        <p>© {new Date().getFullYear()} Kumar's PolyClinic. All rights reserved.</p>
       </div>
     </animated.footer>
   );
