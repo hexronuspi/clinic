@@ -1,7 +1,7 @@
 import React from 'react'
-import NavBar from '../Components/navbar'
-import Footer from '../Components/footer'
-import { SignForm } from '../Components/signup'
+import NavBar from '../Components/landingPage/navbar'
+import Footer from '../Components/landingPage/footer'
+import { SignForm } from '../Components/landingPage/signup'
 
 export default function Signpage() {
   return (

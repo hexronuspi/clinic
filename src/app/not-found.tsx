@@ -1,8 +1,8 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
-import NavBar from '../app/Components/navbar';
-import Footer from '../app/Components/footer';
+import NavBar from './Components/landingPage/navbar';
+import Footer from './Components/landingPage/footer';
 import Link from 'next/link';
 export default function NotFound() {
   return (
