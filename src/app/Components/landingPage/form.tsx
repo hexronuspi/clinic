@@ -168,6 +168,8 @@ export const ContactUs = () => {
       </PopoverContent>
     </Popover>
     <p className="text-gray-500 text-sm">Preferred clinic visit date.</p>
+    <p className="text-gray-500 text-sm">(Same day clinic visit must be scheduled before 4pm)</p>
+    
                 <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="date" type="hidden" name="date" value={date ? format(date, "PPP") : ""} />
     </motion.div>
         </div>
@@ -193,7 +195,9 @@ export const ContactUs = () => {
           >
             Send Message
           </motion.button>
+        
         </div>
+       
       </form>
 
     </motion.div>

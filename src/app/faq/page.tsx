@@ -1,41 +1,46 @@
 "use client"
 import React from "react";
-import {Accordion, AccordionItem} from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
+import { FaRegClock, FaRegQuestionCircle, FaRegCreditCard, FaRegIdBadge, FaRegHospital, FaUserShield } from 'react-icons/fa';
 import NavBar from "../Components/landingPage/navbar";
 import Footer from "../Components/landingPage/footer";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function App() {
-  const content1 = "This is the answer to FAQ 1.";
-  const content2 = "This is the answer to FAQ 2.";
-  const content3 = "This is the answer to FAQ 3.";
-  const content4 = "This is the answer to FAQ 4.";
-  const content5 = "This is the answer to FAQ 5.";
-
   return (
     <main>
       <NavBar/>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <motion.div
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="text-3xl font-extrabold text-center text-gray-900 my-8">
           Frequently Asked Questions
         </h2>
         <Accordion variant="shadow">
-          <AccordionItem key="1" aria-label="FAQ 1" title="FAQ 1">
-            {content1}
+          <AccordionItem key="1" title={<><FaRegClock className="mr-2" />What are your operating hours?</>}>
+            Our clinic is open from 9am to 5pm from Monday to Friday. We are closed on weekends and public holidays.
           </AccordionItem>
-          <AccordionItem key="2" aria-label="FAQ 2" title="FAQ 2">
-            {content2}
+          <AccordionItem key="2" title={<><FaRegQuestionCircle className="mr-2" />Do I need to make an appointment?</>}>
+            Yes, we encourage you to make an appointment to ensure that you can be seen promptly. Walk-ins are also welcome, but there may be a wait.
           </AccordionItem>
-          <AccordionItem key="3" aria-label="FAQ 3" title="FAQ 3">
-            {content3}
+          <AccordionItem key="3" title={<><FaRegCreditCard className="mr-2" />What insurance do you accept?</>}>
+            We accept most major insurance plans. Please contact us to confirm whether we accept your specific insurance.
           </AccordionItem>
-          <AccordionItem key="4" aria-label="FAQ 4" title="FAQ 4">
-            {content4}
+          <AccordionItem key="4" title={<><FaRegIdBadge className="mr-2" />What should I bring to my first appointment?</>}>
+            Please bring your identification, insurance card, and any relevant medical records or medications.
           </AccordionItem>
-          <AccordionItem key="5" aria-label="FAQ 5" title="FAQ 5">
-            {content5}
+          <AccordionItem key="5" title={<><FaUserShield className="mr-2" />What is your privacy policy?</>}>
+            We are committed to protecting the privacy of our patients. We collect, use, and safeguard your information in accordance with our  <Link href="/privacy"><span className="text-blue-400">privacy policy</span></Link>.
+          </AccordionItem>
+          <AccordionItem key="6" title={<><FaRegHospital className="mr-2" />What services do you offer?</>}>
+            We offer a wide range of medical services, please visit <Link href="/Services"><span className="text-blue-400">services</span></Link> section for more details.
           </AccordionItem>
         </Accordion>
-      </div>
+      </motion.div>
       <Footer/>
     </main>
   );
