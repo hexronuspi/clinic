@@ -21,7 +21,7 @@ export default function Footer() {
   <h2 className="text-xl font-bold mb-2">
     <Link href="Help">Contact Us</Link>
   </h2>
-  <p><a href="mailto:drrajnish5@gmail.com" className="hover:underline">Email: drrajnish5@gmail.com</a></p>
+  <p><a href="mailto:drrajnish5@gmail.com" className="hover:underline">Email: nandarkumar29@gmail.com</a></p>
   <p><a href="tel:+919967954124" className="hover:underline">Phone: +91 9967954124</a></p>
 </div>
       </div>

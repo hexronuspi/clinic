@@ -78,7 +78,7 @@ export default function Testimonial() {
       {list.slice(0, isMobile ? 4 : list.length).map((item, index) => (
         <Link href={item.link || ""} key={index} target="blank">
         
-            <Card shadow="sm" isPressable>
+            <Card shadow="sm"  isPressable>
               <CardBody className="p-4" style={{ height: "250px" }}>
                 <p className="text-justify">{item.text}</p>
               </CardBody>

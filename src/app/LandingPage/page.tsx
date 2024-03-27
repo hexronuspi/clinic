@@ -11,7 +11,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setShowBackToTopButton(true);
       } else {
         setShowBackToTopButton(false);
